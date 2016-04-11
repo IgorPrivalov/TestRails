@@ -1,0 +1,13 @@
+<%= form_for @todo do |f| %>
+    <p><%= f.label :todo_name %><br>
+      <%= f.text_field :todo_name %></p>
+
+    <p><%= f.label :status %><br>
+      <%= select(:todo, :Todo.todo_name, :status, Todo.status) %></p>
+
+    <p><%= f.label :time %><br>
+      <%= f.text_field :time %></p>
+
+    <br>
+    <%= f.submit 'Create' %>
+<% end %>
